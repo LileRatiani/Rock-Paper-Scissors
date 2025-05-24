@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div class="both-pages">
+      <!-- first task -->
+      <div class="task1-div">
+        <div class="main">
+          <h1>Group Form</h1>
+
+          <form action="/submit" class="group-form">
+            <div class="firstname-lastname">
+              <div class="inp">
+                <label for="name">First name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="First name"
+                />
+                <span id="name-error" class="error"></span>
+              </div>
+
+              <div class="inp last">
+                <label for="lastname">Last name</label>
+                <input
+                  type="text"
+                  id="lastname"
+                  name="lastname"
+                  placeholder="Last name"
+                />
+                <span id="lastname-error" class="error"></span>
+              </div>
+            </div>
+
+            <br />
+            <div class="inp">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@company.com"
+              />
+              <span id="email-error" class="error"></span>
+            </div>
+
+            <br />
+            <div class="inp">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+              />
+              <span id="password-error" class="error"></span>
+            </div>
+
+            <br />
+            <div class="inp">
+              <label for="team">Team size</label>
+              <select name="team" id="team">
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </div>
+
+            <br />
+
+            <p>Technologies</p>
+
+            <div class="check">
+              <label class="checkbox-group"
+                ><input type="checkbox" /> Html</label
+              >
+              <label class="checkbox-group"
+                ><input type="checkbox" /> ReactJS</label
+              >
+              <label class="checkbox-group"
+                ><input type="checkbox" /> Css</label
+              >
+              <label class="checkbox-group"
+                ><input type="checkbox" /> Figma</label
+              >
+              <label class="checkbox-group"
+                ><input type="checkbox" /> Javascript</label
+              >
+              <label class="checkbox-group"
+                ><input type="checkbox" /> Github</label
+              >
+              <span id="checkboxes-error" class="error"></span>
+            </div>
+
+            <button type="submit" class="sub">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- second task -->
+      <div class="task2-div" style="display: none; width: 100%">
+        <div class="main-div">
+          <div class="head">
+            <h1>Rock Paper Scissors</h1>
+            <h2 id="reset-btn">RESET THE TOUR</h2>
+          </div>
+          <div class="scores">
+            <div class="player-score">
+              <p>player score:</p>
+              <p style="display: none"></p>
+            </div>
+            <div class="computer-score">
+              <p>computer score:</p>
+              <p style="display: none"></p>
+            </div>
+          </div>
+          <div class="result">
+            <p>Waiting for your move...</p>
+          </div>
+          <div class="pictures">
+            <img src="scissors.png" alt="" id="user" class="flip" />
+            <p>VS</p>
+            <img src="scissors.png" alt="" id="comp" />
+          </div>
+          <div class="buttons">
+            <p class="choose-move-text">
+              Choose your move, rock paper or scissors?
+            </p>
+            <button id="rock" onclick="generate(event)">ROCK</button>
+            <button id="paper" onclick="generate(event)">PAPER</button>
+            <button id="scissors" onclick="generate(event)">SCISSORS</button>
+          </div>
+          <div class="game-history">
+            <h1>Game History</h1>
+            <ul></ul>
+          </div>
+          <div class="three-photos">
+            <img src="./rock.png" alt="group" />
+            <img src="./paper.png" alt="five" class="five" />
+            <img src="./scissors.png" alt="vector" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
